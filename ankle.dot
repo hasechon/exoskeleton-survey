@@ -1,0 +1,88 @@
+// 足首外骨格
+digraph exoskeleton {
+
+size="7,8";
+// rankdir=LR
+node [fontsize=24, shape = plaintext];
+
+2002 -> 2005;
+2005 -> 2008;
+2008 -> 2009:
+2009 -> 2015;
+2015 -> 2020;
+
+node [fontsize=20];
+{ rank=same;  2002 n2002_0; }
+{ rank=same;  2005 n2005_0; }
+{ rank=same;  2008 n2008_0; }
+{ rank=same;  2009 n2009_0; }
+{ rank=same;  2015 n2015_0; }
+{ rank=same;  2020 n2020_0 n2020_1; }
+
+"n2002_0" [
+label = "{
+        <f0> Exoskeletons for Human Performance \n Augmentation(EHPA) : A Program Summary|
+        <f1> Ephrahim Garcia, Janet M. Sater and John Main
+        }"
+shape = "record"
+];
+
+"n2005_0" [
+label = "{
+        <f0> Energetic consequences of walking like an inverted pendulum: Step-to-step transitions|
+        <f1> Kuo, AD (Kuo, AD); Donelan, JM (Donelan, JM); Ruina, A (Ruina, A)|
+        歩行コストの分析
+        }"
+shape = "record"
+];
+
+
+"n2008_0" [
+label = "{
+        <f0> Lower Extremity Exoskeletons and Active Orthoses\n: Challenges and State-of-the-Art|
+        <f1> Aaron M. Dollar ; Hugh Herr
+        }"
+shape = "record"
+];
+
+"n2009_0" [
+label = "{
+        <f0> Powered ankle exoskeletons reveal the metabolic cost of plantar flexor mechanical \nwork during walking with longer steps at constant step frequency|
+        <f1> Gregory S. Sawicki* and Daniel P. Ferris|
+        https://jeb.biologists.org/content/212/1/21.long|
+        足首外骨格。歩幅を大きくしたときの歩行のエネルギー効率を良くする研究。\n歩行動作にヒラメ筋が寄与する割合にも言及。
+        }"
+shape = "record"
+];
+
+"n2015_0" [
+label = "{
+        <f0> Reducing the energy cost of human walking\n using an unpowered exoskeleton|
+        <f1> SH Collins, MB Wiggin, GS Sawicki 
+        }"
+shape = "record"
+];
+
+"n2020_0" [
+label = "{
+        <f0> How to run 50% faster without external energy|
+        <f1> Amanda Sutrisno and David J. BraunTechnological
+        }"
+shape = "record"
+];
+
+"n2020_1" [
+label = "{
+        <f0> The exoskeleton expansion: improving walking and running economy|
+        <f1> Gregory S. Sawicki1,2,3*, Owen N. Beck1,2, Inseung Kang1 and Aaron J. Young1,3*|
+        REVIEW
+        }"
+shape = "record"
+];
+
+n2002_0 -> n2008_0 [ label = "22" ];
+n2005_0 -> n2009_0 [ label = "" ];
+n2008_0 -> n2020_0 [ label = "8" ];
+n2015_0 -> n2020_0 [ label = "9" ];
+n2009_0 -> n2020_1 [ label = "24" ]
+}
