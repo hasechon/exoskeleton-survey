@@ -1,0 +1,44 @@
+// 上肢外骨格
+digraph exoskeleton {
+
+size="7,8";
+// rankdir=LR
+node [fontsize=24, shape = plaintext];
+
+1985 -> 2002;
+2002 -> 2005;
+2005 -> 2008;
+2008 -> 2009:
+2009 -> 2015;
+2015 -> 2020;
+
+node [fontsize=20];
+{ rank=same;  1985 n1985_0; }
+{ rank=same;  2008 n2008_0; }
+
+
+"n1985_0" [
+label = "{
+        <f0> The Coordination of Arm Movements: An Experimentally Confirmed Mathematical Model |
+        <f1> T Flash and N Hogan|
+        手先の軌道について|
+        Journal of Neuroscience
+        }"
+shape = "record"
+];
+
+"n2008_0" [
+label = "{
+        <f0> Development of a 3DOF mobile exoskeleton robot for human upper-limb motion assist|
+        <f1> Kazuo Kiguchi, Mohammad Habibur Rahman, Makoto Sasaki, Kenbu Teramoto|
+        3次元自由度の上肢運動（肩の上下・水平屈曲・伸展，肘の屈曲・伸展運動）\n
+        を支援するための移動型外骨格ロボットの機構と制御方法の提案.\n
+        提案する制御方法におけるユーザの軌跡 とユーザの軌跡との偶発的な衝突を防止するために，\n
+        障害物回避アルゴリズムが適用されている．|
+        Robotics and Autonomous Systems
+        }"
+shape = "record"
+];
+
+n1985_0 -> n2008_0 [ label = "18" ]
+}
