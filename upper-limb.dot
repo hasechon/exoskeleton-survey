@@ -21,7 +21,7 @@ node [fontsize=20];
 label = "{
         <f0> The Coordination of Arm Movements: An Experimentally Confirmed Mathematical Model |
         <f1> T Flash and N Hogan|
-        手先の軌道について|
+        手先の軌道について、水平面内の動きをモデル化|
         Journal of Neuroscience
         }"
 shape = "record"
