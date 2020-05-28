@@ -1,0 +1,82 @@
+// 下肢外骨格
+digraph exoskeleton {
+
+size="7,8";
+// rankdir=LR
+node [fontsize=24, shape = plaintext];
+
+1985 -> 2002;
+2002 -> 2005;
+2005 -> 2008;
+2008 -> 2010:
+2010 -> 2011:
+2011 -> 2012;
+2012 -> 2014;
+2014 -> 2020;
+
+node [fontsize=20];
+{ rank=same;  2010 n2010_0; }
+{ rank=same;  2011 n2011_0; }
+{ rank=same;  2020 n2020_0 n2020_1 n2020_2; }
+
+
+"n2010_0" [
+label = "{
+        Kinematic and dynamic analysis of an anatomically based knee joint|
+        Kok-Meng Lee n, Jiajie Guo|
+        外骨格の設計を目的に、膝関節の数学モデルを３つ作成|
+        Journal of Biomechanics
+        }"
+shape = "record"
+];
+
+"n2011_0" [
+label = "{
+        An adaptive knee joint exoskeleton based on biological geometries|
+        Dong-hai Wang, Jiajie Guo, Kok-Meng Lee, Can-jun Yang, and Hui Yu|
+        膝関節のモデルを単純なピン結合ではなく、スライダー/カムの機構ととらえることで外骨格設計の指針を作る。\n
+        膝関節の角度による関節と外骨格固定点の距離の変化をカムで補正。|
+        International Conference on Robotics and Automation
+        }"
+shape = "record"
+];
+
+"n2020_0" [
+label = "{
+        Effects of Assistance during Early Stance Phase Using a Robotic Knee Orthosis on Energetics,\n
+         Muscle Activity, and Joint Mechanics during Incline and Decline Walking|
+        Dawit Lee, Eun Chan Kwak, Bailey J. McLain, Inseung Kang, Aaron J. Young, |
+        健常者向けの膝外骨格。立脚期に合わせてアシストすることで歩行エネルギーを低減する狙い。\n
+        被験者の一部で代謝コストの改善が見られた。|
+        IEEE TRANSACTIONS ON NEURAL SYSTEMS AND REHABILITATION ENGINEERING
+        }"
+shape = "record"
+];
+
+"n2020_1" [
+label = "{
+        Design, Development, and Validation of a Self-Aligning Mechanism for High-Torque Powered Knee Exoskeletons|
+        Sergei V. Sarkisian, Marshall K. Ishmael, Grace R. Hunt, and Tommaso Lenzi |
+        装着者の膝関節と外骨格の関節のずれの影響を避けるため、prismatic-revolute-revolute (PRR) 構造を導入。\n
+        spuriousな(偽の)力の発生を低減できることを確認。|
+        IEEE TRANSACTIONS ON NEURAL SYSTEMS AND REHABILITATION ENGINEERING
+        }"
+shape = "record"
+];
+
+"n2020_2" [
+label = "{
+        Knee Joint Biomechanics in Physiological Conditions and How Pathologies Can Affect It: A Systematic Review|
+        Li Zhang,Geng Liu,Bing Han,Zhe Wang,Yuzhou Yan,Jianbing Ma,and Pingping Wei |
+        膝関節を理解するために138本の論文をレビュー|
+        Applied Bionics and Biomechanics
+        }"
+shape = "record"
+];
+
+
+n2010_0 -> n2011_0 [ label = "11 同一著者" ]
+n2011_0 -> n2020_0 [ label = "15" ]
+n2011_0 -> n2020_1 [ label = "10" ]
+n2011_0 -> n2020_2 [ label = "39" ]
+}
